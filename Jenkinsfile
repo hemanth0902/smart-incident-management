@@ -35,8 +35,12 @@ pipeline {
             steps {
                 dir('frontend') {
                     sh '''
-                    npm install
-                    npm run build
+                    export PATH=/usr/local/bin:$PATH
+                node -v
+                npm -v
+                npm install
+                npm run build
+            
                     '''
                 }
             }
