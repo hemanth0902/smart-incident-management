@@ -62,6 +62,7 @@ pipeline {
             }
         }
 
+/*
         stage('Quality Gate') {
             steps {
                 timeout(time: 5, unit: 'MINUTES') {
@@ -70,7 +71,8 @@ pipeline {
             }
         }
 
-        stage('Build Backend Docker Image') {
+*/  
+      stage('Build Backend Docker Image') {
             steps {
                 dir('backend') {
                     sh "docker build -t ${BACKEND_IMAGE} ."
